@@ -6,4 +6,8 @@ provider "heroku" {
 resource "heroku_app" "default" {
   name = "challonge-hyde"
   region = "us"
+
+  config_vars {
+    CUSTOM_RUBY_VERSION = "${var.ruby_version}"
+  }
 }
