@@ -4,8 +4,12 @@ module Hyde
       puts 'Hello World'
     end
 
-    post '/webhook' do
-      puts params.inspect
+    post '/webhook/pivotal' do
+      logger.info params.inspect
+    end
+    
+    post '/webhook/phabricator' do
+      logger.info params.inspect
     end
   end
 end

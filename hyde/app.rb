@@ -8,6 +8,8 @@ require './hyde/router'
 module Hyde
   class App < Sinatra::Application
     configure do
+      enable :logging
+
       disable :method_override
       disable :static
     end
