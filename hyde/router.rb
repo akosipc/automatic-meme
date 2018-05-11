@@ -5,7 +5,7 @@ module Hyde
     end
 
     post '/webhook' do
-      puts 'Hello World Ulet'
+      puts params.inspect
     end
   end
 end
